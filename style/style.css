@@ -5,6 +5,11 @@
     line-height: 1;
     box-sizing: border-box;
 }
+
+img{
+    max-width: 100%;
+}
+
 body{
     background: url('../pics/bg-body.png');
 }
@@ -12,7 +17,7 @@ body{
   font-family: "Lobster", sans-serif;
   font-weight: 200;
   font-style: normal;
-  font-size: xx-large;
+  font-size: 2rem;
   margin: 40px 0;
   padding: 30px 0;
   color: rgb(67, 184, 21);
@@ -25,9 +30,11 @@ body{
   margin: 0 auto;
   max-width: 1000px;
   overflow: hidden;
+  width: 95%;
+  margin-bottom: 50px;
 }
 
-.container::after {
+.container::after, .boxes::after, .lepteto::after{
     content: "";
     clear: both;
     display: table;
@@ -44,6 +51,7 @@ body{
 .content{
     width: 70%;
     float: left;
+    padding: 0 10px;
 }
 
 .sidebar{
@@ -73,4 +81,69 @@ ul{
 
 .menu ul li:hover{
     background-color: rgb(67, 184, 21);
+}
+
+.sidebar ul li{
+    border-bottom: 1px solid grey;
+} 
+
+.sidebar ul li:hover{
+    background-color: whitesmoke;
+}
+
+.sidebar ul li a {
+    display: inline-block;
+    padding: 20px 0;
+    text-decoration: none;
+    color: grey;
+}
+
+.box{
+    width: 50%;
+    float: left;
+    padding: 0% 10px;
+    padding-bottom: 20px;
+}
+
+.recept{
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+.recept h2{
+    padding: 10px 0;
+}
+
+.recept p{
+    line-height:1rem ;
+}
+
+.lepteto ul li{
+    float: left;
+    padding: 0 8px;   
+}
+
+.lepteto ul li a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: whitesmoke;
+    border: 1px solid grey;
+    font-size: .8rem;
+}
+
+.lepteto ul{
+    padding-left: 5px;
+}
+
+.lepteto ul li:first-child a {
+    color: white;
+    background-color: black;
+}
+
+@media (max-width:700px){
+    .content{
+        background-color:rgb(67, 184, 21) ;
+    }
 }
